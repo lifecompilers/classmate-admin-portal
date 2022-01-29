@@ -1,0 +1,108 @@
+$sidebar-bg-color: #3f51b5;
+$sidebar-color   : #fff !default;
+$submenu-bg-color: #3f51b5 !default;
+$icon-bg-color   : #3f51b5 !default;
+@import "./colors.scss";
+@import "~react-pro-sidebar/dist/scss/styles.scss";
+
+.layout {
+    display       : flex;
+    flex-direction: row;
+
+    .sidebar {
+        height: 100vh;
+
+        .sidebar-header {
+            font-size      : 32px;
+            font-weight    : 700;
+            padding        : 10px;
+            text-align     : left;
+            letter-spacing : 0.4px;
+            text-transform : uppercase;
+            color          : rgba(255, 255, 255, 0.5);
+            border         : none !important;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        .sidebar-menu {
+            padding-top: 0;
+        }
+
+        .pro-menu-item.active {
+            background-color: $sidebar-hightlight-background-color;
+            color           : $sidebar-hightlight-color;
+            border-right    : 3px solid $sidebar-hightlight-border-color;
+        }
+
+        .sidebar-footer {
+            // position: absolute;
+            width      : 100%;
+            // bottom  : 0;
+            // left    : 0;
+            border     : none !important;
+
+            .sidebar-footer-menu-item {
+                background-color: $sidebar-footer-background;
+            }
+        }
+
+        .sidebar-footer-logo {
+            position  : absolute;
+            width     : 100%;
+            bottom    : 0;
+            left      : 0;
+            border    : none !important;
+            text-align: center;
+
+            .sidebar-footer-logo-item {
+                background-color: $speech-blue-color;
+            }
+        }
+    }
+
+    .main-panel {
+        width         : 100%;
+        padding       : 15px;
+        display       : flex;
+        flex-direction: column;
+
+        .header {
+            display        : flex;
+            flex-direction : row;
+            justify-content: space-between;
+            width          : 100%;
+
+            .header-action-bar {
+                background-color: $background-color-inner;
+                border-radius   : 40px;
+                height          : 50px;
+                align-items     : center;
+                display         : flex;
+                flex-direction  : row;
+                padding         : 0 5px 0 25px;
+                margin          : 0 15px;
+            }
+
+            .header-menu {
+                display       : flex;
+                flex-direction: row;
+
+                .header-page-title {
+                    font-weight: 500;
+                    margin     : 0;
+                    align-self : center;
+                }
+            }
+        }
+
+        .content {
+            width: 100%;
+        }
+    }
+}
